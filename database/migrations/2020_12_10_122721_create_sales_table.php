@@ -15,13 +15,13 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->string('manager');
-            $table->string('january');
-            $table->string('february');
-            $table->string('march');
-            $table->string('april');
-            $table->string('may');
-            $table->string('june');
+            $table->string('manager')->nullable();
+            $table->decimal('january',11,2)->nullable();
+            $table->decimal('february',11,2)->nullable();
+            $table->decimal('march',11,2)->nullable();
+            $table->decimal('april',11,2)->nullable();
+            $table->decimal('may',11,2)->nullable();
+            $table->decimal('june',11,2)->nullable();
             $table->timestamps();
         });
     }
